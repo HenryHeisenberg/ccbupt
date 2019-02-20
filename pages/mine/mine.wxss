@@ -1,0 +1,39 @@
+button {
+  background-color: #fff;
+}
+
+button:active {
+  background-color: #ececec;
+}
+
+.userInfo {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px 3%;
+  width: 94%;
+  border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInfo .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userInfo .nickName {
+  color: #262626;
+  font-size: 16px;
+}
+
+.userInfo button {
+  color: #fff;
+  background-color: #ff8364;
+  padding: 0px 10px;
+  border-radius: 5px;
+}

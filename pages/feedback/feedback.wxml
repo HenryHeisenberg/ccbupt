@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">意见反馈</view>
+    <view class="page__desc">您的反馈让我们服务变得更好</view>
+  </view>
+  <view class="page__bd">
+    <form bindsubmit="submitFeedback">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="反馈内容(必填)" style="height: 5em" name="content" />
+            <view class="weui-textarea-counter">0/200</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn" form-type="submit" >确定</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<van-notify id="van-notify" />
+<view wx:if="{{activeNum==0}}">
+<van-tabs bind:click="onClick">
+  <van-tab title="公告栏">
+  <view class='news'>
+      <view class='news-title'>news1</view>
+      <view class='time'>2018-8-8</view>
+  </view>
+  
+  </van-tab>
+  <van-tab title="问题答复"><text class="title">常见问题</text>
+<van-collapse value="{{ activeNames }}" bind:change="turn">
+  <block wx:for="{{list}}" wx:key="index">
+    <van-collapse-item title="{{item.question}}" name="{{index}}">
+      {{item.answer}}
+    </van-collapse-item>
+  </block>
+</van-collapse>
+</van-tab>
+</van-tabs>
+</view>
+
+<view wx:if="{{activeNum==4}}">
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">意见反馈</view>
+    <view class="page__desc">您的反馈让我们服务变得更好</view>
+  </view>
+  <view class="page__bd">
+    <form bindsubmit="submitFeedback">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea"  placeholder="反馈内容(必填)" style="height: 5em" bindlinechange='input' name="content" />
+            <view class="weui-textarea-counter">{{contentLength}}/200</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn" form-type="submit" >确定</button>
+      </view>
+    </form>
+  </view>
+</view>
+</view>
+
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="">主页</van-tabbar-item>
+  <van-tabbar-item icon="">流程</van-tabbar-item>
+  <van-tabbar-item icon="" >导航</van-tabbar-item>
+  <van-tabbar-item icon="" info="">缴费</van-tabbar-item>
+  <van-tabbar-item icon="" info="">意见反馈</van-tabbar-item>
+</van-tabbar>

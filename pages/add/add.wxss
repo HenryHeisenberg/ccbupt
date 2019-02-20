@@ -1,0 +1,17 @@
+.picker {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+.label {
+  max-width: 90px;
+  min-width: 90px;
+}

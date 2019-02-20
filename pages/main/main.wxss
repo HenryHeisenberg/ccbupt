@@ -1,0 +1,58 @@
+/* pages/main/main.wxss */
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(69,90,100,.6);
+  padding: 20px 15px 15px;
+}
+
+.news{
+  width: 87%;
+  margin:10px;
+  padding:10px;
+  border-radius: 5px;
+  border-top:1px solid #DEDEDE;
+  border-left:1px solid #DEDEDE;
+  box-shadow: 2px 2px 2px #c7c7c7;
+}
+
+@import "../../style/weui.wxss";
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page__hd {
+    padding: 0px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: center;
+    font-size: 14px;
+}
+.weui-btn {
+  color: #fff;
+  background-color : rgb(73, 140, 233);
+}

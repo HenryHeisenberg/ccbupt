@@ -1,0 +1,7 @@
+<van-cell-group>
+  <van-cell title="身份证号" value="{{student.idNum}}" />
+  <van-cell title="考生号" value="{{student.candidateNum}}" />
+  <van-cell title="专业" value="{{student.major}}"/>
+  <van-cell title="如果无误请点击确认进入系统，如果有误可以联系招生老师，或者招生咨询电话：010-61227811、61227318、61227578"/>
+  <i-button bind:click="submit" type="primary" shape="circle" size="small">确认</i-button>
+</van-cell-group>

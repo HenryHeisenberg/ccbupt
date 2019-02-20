@@ -1,0 +1,17 @@
+<van-notify id="van-notify" />
+
+<van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+  <van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{maxDate}}" bind:cancel="onClose" bind:confirm="onConfirm" />
+</van-popup>
+
+<van-cell-group>
+  <van-field value="{{ name }}" id='name' bind:input="input" label="姓名" placeholder="请输入姓名" />
+
+  <van-field value="{{ idNum }}" id='idNum' bind:input="input" label="身份证号码" placeholder="请输入身份证号码" />
+  <van-field value="{{ candidateNum }}" id='candidateNum' bind:input="input" label="考生号" placeholder="请输入考生号" />
+  <van-field value="{{ major }}" id='major' bind:input="input" label="专业" placeholder="请输入专业" />
+
+</van-cell-group>
+
+
+<i-button bind:click="submit" type="primary" shape="circle" size="small">提交</i-button>

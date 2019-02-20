@@ -1,0 +1,4 @@
+/* pages/students/students.wxss */
+.confirm{
+  padding-top:100px;
+}

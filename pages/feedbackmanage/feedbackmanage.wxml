@@ -1,0 +1,32 @@
+<block wx:for="{{list}}" wx:key="{{index}}">
+<van-panel title="反馈者ID：{{item.asker}}" status="{{item.replier? \"已回复\" : \"未回复\"}}" use-footer-slot header-class="panel-header">
+  <view class="content">反馈问题：{{item.askContent}}</view>
+  <view class="divLine"></view>
+  <view class="content" wx:if="{{item.replier}}">回复：{{item.replyContent}}</view>
+  <view slot="footer">
+    <van-button  wx:if="{{!item.replier}}" size="small" data-comment="{{item}}" bindtap="replyComment">回复</van-button>
+    <van-button data-cid="{{item.id}}" size="small" type="danger" bindtap='deleteComment'>删除</van-button>
+  </view>
+</van-panel>
+</block>
+<van-notify id="custom-selector" />
+<van-dialog id="van-dialog" />
+<van-dialog
+  use-slot
+  async-close
+  show="{{ show }}"
+  show-cancel-button
+  bind:close="onClose"
+  bind:confirm="confirmReply"
+>
+  <van-field
+    value="{{ message }}"
+    label="回复"
+    type="textarea"
+    placeholder="请输入回复内容"
+    autosize
+    border="{{ false }}"
+    bind:change="messageChange"
+  />
+</van-dialog>
+
