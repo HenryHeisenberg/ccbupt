@@ -1,0 +1,37 @@
+<van-notify id="van-notify" />
+<view class='content'>
+<view class='login'>
+<van-cell-group>
+<view class='page-head-img'>
+<image src='/images/login.png'></image>
+<view>登录</view>
+</view>
+<form bindsubmit="formSubmit">
+  <van-field
+    v-model="username"
+    label="用户名"
+    placeholder="请输入用户名"
+    name="username"
+    required
+    bindinput="inputusername"
+  />
+  <van-field
+    v-model="password"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    name="password"
+    required
+    bindinput="inputpassword"
+  />
+  <view class="login-button">
+  <i-button bindtap="formSubmit" type="primary" shape="circle" size="small">登陆</i-button>
+  <van-popup show="{{ show }}" bind:close="onClose">{{ error }}</van-popup>
+  </view>
+  </form>
+  <view class='web-button'>
+  <van-button size="small" bindtap='goToWeb' plain  type="danger">学校官网</van-button>
+  </view>
+</van-cell-group>
+</view>
+</view>

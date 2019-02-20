@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/feedbackmanage/feedbackmanage",
+    "pages/index/index",
+    "pages/add/add",
+    "pages/students/students",
+    "pages/login/out",
+    "pages/comments/comments",
+    "pages/board/board",
+    "pages/mine/mine",
+    "pages/index/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2d8cf0",
+    "navigationBarTitleText": "世纪学院新生报到系统",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents":  {
+    "wux-fab-button": "../../dist/wux/fab-button/index",
+    "wux-upload": "../../dist/wux/upload/index",
+      "van-tabbar": "../../dist/vant/tabbar/index",
+      "van-tabbar-item": "../../dist/vant/tabbar-item/index",
+    "van-tag": "../../dist/vant/tag/index",
+    "van-row": "../../dist/vant/row/index",
+    "van-col": "../../dist/vant/col/index",
+      "van-tab": "../../dist/vant/tab/index",
+      "van-tabs": "../../dist/vant/tabs/index",
+    "van-datetime-picker": "../../dist/vant/datetime-picker/index",
+    "van-radio": "../../dist/vant/radio/index",
+    "van-radio-group": "../../dist/vant/radio-group/index",
+    "van-cell": "../../dist/vant/cell/index",
+    "van-cell-group": "../../dist/vant/cell-group/index",
+    "van-popup": "../../dist/vant/popup/index",
+    "van-panel": "../../dist/vant/panel/index",
+    "van-field": "../../dist/vant/field/index",
+    "van-button": "../../dist/vant/button/index",
+    "van-notify": "../../dist/vant/notify/index",
+    "i-load-more": "../../dist/iview/load-more/index",
+    "i-tag": "../../dist/iview/tag/index",
+    "i-button": "../../dist/iview/button/index"
+  }
+}

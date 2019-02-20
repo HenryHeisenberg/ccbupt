@@ -1,0 +1,62 @@
+<van-notify id="van-notify" />
+
+<wux-fab-button position="bottomRight" buttons="{{buttons}}" direction="vertical" bind:click="fabClick" />
+
+<van-popup show="{{ show }}" bind:close="popupClose" custom-style="width:600rpx; border-radius: 20rpx;">
+  <van-field value="{{ title }}" title-width="50px" id='title' bind:input="input" label="主题" placeholder="请输入主题" />
+  <van-field value="{{ remark }}" title-width="50px" id='remark' bind:input="input" type="textarea" label="备注" placeholder="请输入备注(最多100字)" maxlength="100" autosize/>
+  <i-button type="primary" size="small" bind:click="submit">提交</i-button>
+</van-popup>
+
+
+<!-- 警告提示 -->
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+<!-- 成功提示 -->
+<view class="weui-toptips weui-toptips_success" wx:if="{{showSuccessTopTips}}">{{SuccessTopTips}}</view>
+
+<view class='page_head_img'>
+  <image></image>
+  <view>页头</view>
+</view>
+
+<van-radio-group value="{{ radio }}">
+  <van-cell title="校内新闻" clickable data-name="校内新闻" bind:click="onClick">
+    <van-radio name="校内新闻" />
+  </van-cell>
+  <van-cell title="招聘信息" clickable data-name="招聘信息" bind:click="onClick">
+    <van-radio name="招聘信息" />
+  </van-cell>
+  <van-cell title="社团活动" clickable data-name="社团活动" bind:click="onClick">
+    <van-radio name="社团活动" />
+  </van-cell>
+</van-radio-group>
+
+
+
+<view class='picker' bindtap='show'>
+  <view class='label'>纪念日时间</view>
+  <view>{{ time }}</view>
+</view>
+
+
+
+<i-load-more wx:if="{{loadmore}}" />
+<view style='height:65px' wx:else></view>
+<!-- <i-load-more wx:else tip="暂无更多数据" loading="{{ false }}" /> -->
+
+<!-- 加载更多 -->
+<view class="page" wx:if="{{loading}}">
+  <view class="page__bd">
+    <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+  </view>
+</view>
+
+<!-- 没有更多数据 -->
+<view class='card-noMore' wx:if="{{noMore}}">
+  <view class='card-noMore-line'></view>
+  <view>暂无更多数据</view>
+  <view class='card-noMore-line'></view>
+</view>
