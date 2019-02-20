@@ -22,8 +22,39 @@ Page({
         answer: `一、学生可以在综合服务楼一楼充值口进行充值；
 二、点击支付宝，搜索大学生活，点击一卡通，按着要求输入即可充值。`
       }
-    ]
+    ],
+    stepList : [
+    "1.去操场找到本系场地，领取物质",
+    "2.寝室整理",
+    "3.体检",
+    ],
+    result :[
+      
+    ],
   },
+
+onCheck: function(e){
+  console.log(e.detail);
+  if(e.detail.length!=0){
+    var stepOne = e.detail.find((value, index, arr) => {
+      return value === this.data.stepList[0];
+    })
+    if (!stepOne) {
+      wx.showToast({
+        title: '必须先勾选步骤1才可以勾选其他选项',
+        icon : "none"
+      })
+      return;
+    }
+  }
+
+  this.setData({
+    result: e.detail
+  });
+  try {
+    wx.setStorageSync('result', this.data.result);
+  } catch (e) { }
+},
 
 input:function(e){
   var length=e.detail.value.length;
@@ -39,7 +70,6 @@ turn(event){
 },
 
   submitFeedback: function (e) {
-    console.log(e.detail.value.content);
     var content = e.detail.value.content;
     var asker = "123";
     if (content.length === 0) {
@@ -57,12 +87,12 @@ turn(event){
         data: {
           asker: asker,
           askContent: content,
-          askTime:'Mon Feb 18 2019 22:10:09 GMT+0800'
+          askTime: new Date()
         },
         success: function (res) {
           if (res.data.status === "success") {
             wx.showToast({
-              title: "反馈成功",//这里打印出登录成功
+              title: "反馈成功",
               icon: 'success',
               duration: 1000
             })
@@ -103,7 +133,16 @@ turn(event){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    try {
+      const result = wx.getStorageSync('result')
+      if (result) {
+        this.setData({
+          result : result
+        })
+      }
+    } catch (e) {
+     
+    }
   },
 
   /**

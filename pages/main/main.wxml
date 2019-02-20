@@ -20,6 +20,24 @@
 </van-tabs>
 </view>
 
+<view wx:if="{{activeNum==1}}">
+<text class="title">报道流程检查</text>
+<van-checkbox-group value="{{ result }}" bind:change="onCheck">
+  <van-cell-group >
+    <van-cell
+      wx:for="{{ stepList }}"
+      wx:key="index"
+      title="{{ item }}"
+      clickable
+      data-name="{{ item }}"
+    >
+      <van-checkbox class="checkboxes-{{ item }}" name="{{ item }}" >
+      </van-checkbox>
+    </van-cell>
+  </van-cell-group>
+</van-checkbox-group>
+</view>
+
 <view wx:if="{{activeNum==4}}">
 <view class="page">
   <view class="page__hd">
