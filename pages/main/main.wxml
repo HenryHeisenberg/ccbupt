@@ -31,7 +31,7 @@
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea class="weui-textarea"  placeholder="反馈内容(必填)" style="height: 5em" bindlinechange='input' name="content" />
+            <textarea class="weui-textarea"  placeholder="反馈内容(必填)" style="height: 5em" bindinput='input' name="content" maxlength="200" />
             <view class="weui-textarea-counter">{{contentLength}}/200</view>
           </view>
         </view>

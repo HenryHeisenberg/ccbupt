@@ -8,7 +8,7 @@ Page({
 
   data: {
     activeNum:'',
-    contentLength:'',
+    contentLength: 0,
     activeNames: ['1'],
     list: [
       {
@@ -26,7 +26,10 @@ Page({
   },
 
 input:function(e){
-  console.log(e)
+  var length=e.detail.value.length;
+  this.setData({
+    contentLength : length
+  });
 },
 
 turn(event){
