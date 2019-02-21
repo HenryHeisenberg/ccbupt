@@ -4,7 +4,6 @@ var Util = require('../../utils/util.js');
 Page({
   data: {
     list : [],
-    replay : "",
     show : false,
     message : "",
     comment : {},
@@ -76,7 +75,8 @@ Page({
     var comment=e.target.dataset.comment;
     this.setData({
       show : true,
-      comment :comment
+      comment :comment,
+      message : ""
     })
   },
   onClose(event) {
@@ -84,12 +84,14 @@ Page({
       // 异步关闭弹窗
       setTimeout(() => {
         this.setData({
-          show: false
+          show: false,
+          message : ""
         });
       }, 1000);
     } else {
       this.setData({
-        show: false
+        show: false,
+        message: ""
       });
     }
   },

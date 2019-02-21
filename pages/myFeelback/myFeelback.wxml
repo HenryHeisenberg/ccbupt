@@ -1,0 +1,10 @@
+<block wx:for="{{list}}" wx:key="{{index}}">
+<van-panel title="反馈者ID：{{item.asker}}" status="{{item.replier? \"已回复\" : \"未回复\"}}"  header-class="panel-header" class="panel">
+  <view class="content">反馈问题：{{item.askContent}}</view>
+  <view class="divLine"></view>
+  <view class="content" wx:if="{{item.replier}}">回复：{{item.replyContent}}</view>
+</van-panel>
+<view class='placeHolder'></view>
+</block>
+<van-notify id="custom-selector" />
+

@@ -109,6 +109,11 @@
     </form>
   </view>
 </view>
+<van-cell
+  title="查看我的反馈"
+  is-link
+  url="/pages/myFeelback/myFeelback"
+/>
 </view>
 
 
