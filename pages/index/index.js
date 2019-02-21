@@ -7,11 +7,19 @@ const app = getApp();
 Page({
 
   data: {
+    str:'',
+    page:0,
     buttons: [{
       label: '增加学生',
       className: 'add',
       icon: '/images/add.png'
-    }],
+    },
+      // {
+      //   label: '查找学生',
+      //   className: 'select',
+      //   icon: '/images/查找.png'
+      // }
+    ],
   },
   onLoad: function (options) {
     this.setData({})
@@ -19,6 +27,19 @@ Page({
   onShow: function () {
     my.anniversarySelectAll(this, app);
   },
+  onCancel:function(){
+    this.setData({
+      page: 0
+    });
+    my.anniversarySelectAll(this, app);
+  },
+  onSearch: function (event){
+    this.setData({
+      page:1
+    });
+    my.studentsSelectByOne(this, app, event.detail);
+},
+
   onClick(e) {
     console.log(e)
     let index = e.detail.index
@@ -27,6 +48,11 @@ Page({
         url: '/pages/add/add',
       })
     }
+    // else if (index == 1) {
+    //   wx.navigateTo({
+    //     url: '/pages/selectStu/selectStu',
+    //   })
+    // }
   },
   more(e) {
     let that = this;

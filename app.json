@@ -22,6 +22,7 @@
   "usingComponents":  {
     "wux-fab-button": "../../dist/wux/fab-button/index",
     "wux-upload": "../../dist/wux/upload/index",
+    "van-search": "../../dist/vant/search/index",
       "van-tabbar": "../../dist/vant/tabbar/index",
       "van-tabbar-item": "../../dist/vant/tabbar-item/index",
     "van-tag": "../../dist/vant/tag/index",

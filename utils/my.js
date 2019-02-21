@@ -177,6 +177,37 @@ const anniversarySelectAll = (that, app) => {
   });
 }
 
+const studentsSelectByOne = (that, app,str) => {
+  wx.showToast({
+    icon: 'loading',
+    title: '获取中...',
+    duration: 7000
+  })
+  let url = app.data.host + "/students/selectByOne"
+  let data = {
+    str
+  };
+  return utils.get(url, data).then(res => {
+    let resData = res.data;
+    if ('success' == resData.status) {
+      wx.hideToast();
+      wx.showToast({
+        title: '成功',
+      })
+      console.log(resData);
+      that.setData({
+        data: resData.data
+      })
+    } else {
+      Notify(resData.msg);
+      wx.hideToast();
+    }
+  }).catch(res => {
+    Notify('失败');
+    wx.hideToast();
+  });
+}
+
 const boardSelectAll = (that, app) => {
   wx.showToast({
     icon: 'loading',
@@ -371,6 +402,7 @@ const selectAll = (that, app, pageNum = 1, pageSize = 10) => {
 
 
 module.exports = {
+  studentsSelectByOne,
   anniversarySave, //保存
   boardSelectAll,
   selectAll, //获取
