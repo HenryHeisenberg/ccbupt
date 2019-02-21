@@ -7,7 +7,7 @@ Page({
     show : false,
     message : "",
     comment : {},
-    replier : "456"
+    replier : "管理员"
   },
   onLoad : function(options){
     var that =this;
