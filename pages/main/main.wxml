@@ -52,7 +52,7 @@
 <view wx:if="{{activeNum==2}}">
 <van-collapse value="{{ activeNick }}" bind:change="turnTo">
 <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
-  <view slot="left">选择</view>
+
   <van-cell-group>
     <van-collapse-item title="1.关注北京邮电大学财务处公众号缴费" >
       内容
@@ -109,6 +109,11 @@
     </form>
   </view>
 </view>
+<van-cell
+  title="查看我的反馈"
+  is-link
+  url="/pages/myFeelback/myFeelback"
+/>
 </view>
 
 
