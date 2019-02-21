@@ -7,7 +7,7 @@
   padding: 20px 15px 15px;
 }
 
-.news{
+.list{
   width: 87%;
   margin:10px;
   padding:10px;
@@ -16,6 +16,13 @@
   border-left:1px solid #DEDEDE;
   box-shadow: 2px 2px 2px #c7c7c7;
 }
+
+.navi{
+  padding-top: 80px;
+}
+
+
+
 
 @import "../../style/weui.wxss";
 page{

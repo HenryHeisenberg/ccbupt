@@ -177,6 +177,34 @@ const anniversarySelectAll = (that, app) => {
   });
 }
 
+const boardSelectAll = (that, app) => {
+  wx.showToast({
+    icon: 'loading',
+    title: '获取中...',
+    duration: 7000
+  })
+  let url = app.data.host + "/board/selectAll"
+  let data = {};
+  return utils.get(url, data).then(res => {
+    let resData = res.data;
+    if ('success' == resData.status) {
+      wx.hideToast();
+      wx.showToast({
+        title: '成功',
+      })
+      that.setData({
+        data: resData.data
+      })
+    } else {
+      Notify(resData.msg);
+      wx.hideToast();
+    }
+  }).catch(res => {
+    Notify('失败');
+    wx.hideToast();
+  });
+}
+
 const customerAdd = (that, app, idNum, name, candidateNum, major) => {
   wx.showToast({
     icon: 'loading',
@@ -344,6 +372,7 @@ const selectAll = (that, app, pageNum = 1, pageSize = 10) => {
 
 module.exports = {
   anniversarySave, //保存
+  boardSelectAll,
   selectAll, //获取
   customerAdd,
   anniversarySelectAll,

@@ -1,10 +1,36 @@
 <van-notify id="van-notify" />
+<view wx:if="{{activeNum==100}}">
+      <!-- <view class='news-title'>{{newsContent.title}}</view>
+      <view class='publicTime'>{{newsContent.publicTime}}</view>
+      <view class='publicer'>{newsContent.publicer}}</view>
+      <view class='content'>{{newsContent.content}}</view> -->
+<van-panel title="{{newsContent.title}}" desc="作者：{{newsContent.publicer}}    时间：{{newsContent.publicTime}}" status="" use-footer-slot></van-panel>
+<text class='content'>{{newsContent.content}}</text>
+
+<!-- 
+<van-nav-bar
+  title="{{newsContent.title}}"
+  left-text="返回"
+  left-arrow
+  bind:click-left="onClickLeft"
+/> -->
+
+
+</view>
+
 <view wx:if="{{activeNum==0}}">
 <van-tabs bind:click="onClick">
   <van-tab title="公告栏">
   <view class='news'>
-      <view class='news-title'>news1</view>
-      <view class='time'>2018-8-8</view>
+  <block wx:for="{{data}}" wx:key="index">
+  <view class='wall'></view>
+  <view class='block' bindtap='more' data-index="{{index}}">
+  <view class='list' id="{{item.id}}" bindtap='goToNews'>
+      <view class='news-title'>{{item.title}}</view>
+      <view class='time'>{{item.publicTime}}</view>
+  </view>
+</view>
+</block>
   </view>
   
   </van-tab>
@@ -18,6 +44,26 @@
 </van-collapse>
 </van-tab>
 </van-tabs>
+</view>
+
+<view wx:if="{{activeNum==2}}">
+<van-collapse value="{{ activeNames }}" bind:change="turn">
+<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+  <view slot="left">选择</view>
+  <van-cell-group>
+    <van-collapse-item title="1.关注北京邮电大学财务处公众号缴费" >
+      内容
+    </van-collapse-item>
+      <van-collapse-item title="2.支付宝转账">
+      内容
+    </van-collapse-item>
+      <van-collapse-item title="3.学校账户">
+      内容
+    </van-collapse-item>
+  </van-cell-group>
+</van-swipe-cell>
+</van-collapse>
+
 </view>
 
 <view wx:if="{{activeNum==1}}">
@@ -38,7 +84,7 @@
 </van-checkbox-group>
 </view>
 
-<view wx:if="{{activeNum==4}}">
+<view wx:if="{{activeNum==3}}">
 <view class="page">
   <view class="page__hd">
     <view class="page__title">意见反馈</view>
@@ -63,11 +109,11 @@
 </view>
 
 
-
+<view class='navi'>
 <van-tabbar active="{{ active }}" bind:change="onChange">
   <van-tabbar-item icon="">主页</van-tabbar-item>
   <van-tabbar-item icon="">流程</van-tabbar-item>
-  <van-tabbar-item icon="" >导航</van-tabbar-item>
-  <van-tabbar-item icon="" info="">缴费</van-tabbar-item>
+  <van-tabbar-item icon="" info="">缴费方式</van-tabbar-item>
   <van-tabbar-item icon="" info="">意见反馈</van-tabbar-item>
 </van-tabbar>
+</view>

@@ -1,4 +1,6 @@
 // pages/main/main.js
+const my = require("../../utils/my.js");
+
 var app = getApp()
 Page({
 
@@ -8,7 +10,10 @@ Page({
 
   data: {
     activeNum:'',
+
     contentLength: 0,
+    newsContent:'',
+
     activeNames: ['1'],
     list: [
       {
@@ -61,6 +66,38 @@ input:function(e){
   this.setData({
     contentLength : length
   });
+},
+onClickLeft:function(){
+
+},
+
+goToNews:function(event){
+  var that=this;
+  console.log(event.currentTarget.id);
+  var id = event.currentTarget.id;
+  this.setData({
+    activeNum: 100
+  });
+  wx.request({
+    url: app.data.host + "/board/selectById?id="+id,
+    header: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    method: "GET",
+    success: function (res) {
+        that.setData({
+          newsContent: res.data.data
+        });
+      console.log(that.data.newsContent);
+      if (res.data.status === "success") {
+        wx.showToast({
+          title: "反馈成功",//这里打印出登录成功
+          icon: 'success',
+          duration: 1000
+        })
+      }
+    }
+  })
 },
 
 turn(event){
@@ -156,7 +193,7 @@ turn(event){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    my.boardSelectAll(this,app)
   },
 
   /**
