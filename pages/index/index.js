@@ -13,7 +13,7 @@ Page({
       label: '增加学生',
       className: 'add',
       icon: '/images/add.png'
-    },
+    }
       // {
       //   label: '查找学生',
       //   className: 'select',

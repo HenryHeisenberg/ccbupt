@@ -29,7 +29,7 @@
   <view class='block' bindtap='more' data-index="{{index}}">
   <view class='list' id="{{item.id}}" bindtap='goToNews'>
       <view class='news-title'>{{item.title}}</view>
-      <view class='time'>{{item.publicTime}}</view>
+      <view class='news-content'>{{item.content}}</view>
   </view>
 </view>
 </block>

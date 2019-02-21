@@ -1,5 +1,6 @@
 // pages/login/login.js
 
+import Dialog from '../../dist/vant/dialog/dialog';
 
 const utils = require("../../utils/util.js");
 const my = require("../../utils/my.js");
@@ -130,8 +131,19 @@ Page({
 
   },
   goToWeb:function(){
-    wx.navigateTo({
-      url: '/pages/login/out',
+    wx.setClipboardData({
+      data: 'www.ccbupt.com',
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            console.log(res.data) // data
+            wx.showToast({
+              title: '官网复制成功',
+              duration:2000
+            })
+          }
+        })
+      }
     })
   },
   // login:function(){

@@ -1,5 +1,5 @@
 <view class="imagesize">
-  <image src='/images/login.png'></image>
+  <image class='img' src='/images/admin.png'></image>
 </view>
 <view class='but'>
   <i-button bindtap="toStudents" type="primary" shape="circle" size="small">学生管理系统</i-button>

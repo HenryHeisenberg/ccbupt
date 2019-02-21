@@ -55,9 +55,6 @@ onCheck: function(e){
   this.setData({
     result: e.detail
   });
-  try {
-    wx.setStorageSync('result', this.data.result);
-  } catch (e) { }
 },
 
 input:function(e){

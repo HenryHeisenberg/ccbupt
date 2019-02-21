@@ -1,4 +1,17 @@
 .imagesize{
-  display:flex;
+  /* display:flex;
   justify-content: center;
+  width: 30%;
+  height: 30%;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 50px; */
+}
+
+.img{
+    width: 400rpx;
+    height: 400rpx;
+    margin-left:25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }

@@ -2,11 +2,22 @@
 .title {
   margin: 0;
   font-weight: 400;
-  font-size: 14px;
-  color: rgba(69,90,100,.6);
+  font-size: 16px;
+  color: #8a8a8a;
   padding: 20px 15px 15px;
 }
 
+.news-content{
+      display: -webkit-box;
+    font-size:14px;
+    color:#8a8a8a;
+    line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
 
 .list{
   width: 87%;
@@ -15,7 +26,8 @@
   border-radius: 5px;
   border-top:1px solid #DEDEDE;
   border-left:1px solid #DEDEDE;
-  box-shadow: 2px 2px 2px #c7c7c7;
+  border-right:1px solid #DEDEDE;
+  border-bottom:1px solid #DEDEDE;
 }
 
 .navi{

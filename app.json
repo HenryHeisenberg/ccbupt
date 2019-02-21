@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/admin/admin",
-    "pages/login/login",       
+    "pages/login/login",            
     "pages/main/main",
     "pages/feedbackmanage/feedbackmanage",
-    "pages/index/index",
     "pages/students/students",
     "pages/search/search",
     "pages/feedback/feedback",
