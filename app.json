@@ -7,10 +7,6 @@
     "pages/index/index",
     "pages/students/students",
     "pages/search/search",
-<<<<<<< Updated upstream
-=======
-    "pages/login/login",
->>>>>>> Stashed changes
     "pages/feedback/feedback",
     "pages/add/add",
     "pages/login/out",
