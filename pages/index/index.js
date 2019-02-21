@@ -8,7 +8,7 @@ Page({
 
   data: {
     buttons: [{
-      label: '增加客户',
+      label: '增加学生',
       className: 'add',
       icon: '/images/add.png'
     }],

@@ -10,7 +10,7 @@ Page({
 
   data: {
     activeNum:'',
-
+    activeNick: ['1'],
     contentLength: 0,
     newsContent:'',
 
@@ -106,6 +106,12 @@ turn(event){
   });
 },
 
+  turnTo(event) {
+    this.setData({
+      activeNick: event.detail
+    });
+  },
+
   submitFeedback: function (e) {
     var content = e.detail.value.content;
     var asker = "123";
@@ -138,6 +144,12 @@ turn(event){
       })
     }
 
+  },
+
+  navBack:function(){
+    wx.navigateTo({
+      url: '/pages/main/main',
+    })
   },
 
   onChange(event) {
@@ -195,6 +207,12 @@ turn(event){
   onShow: function () {
     my.boardSelectAll(this,app)
   },
+
+
+  navigateBack: function () {
+      wx.navigateBack({ changed: true });//返回上一页
+  },
+
 
   /**
    * 生命周期函数--监听页面隐藏

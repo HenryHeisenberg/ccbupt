@@ -6,6 +6,9 @@
       <view class='content'>{{newsContent.content}}</view> -->
 <van-panel title="{{newsContent.title}}" desc="作者：{{newsContent.publicer}}    时间：{{newsContent.publicTime}}" status="" use-footer-slot></van-panel>
 <text class='content'>{{newsContent.content}}</text>
+<view class='back'>
+<van-button size="small" bindtap='navBack'>返回主页</van-button>
+</view>
 
 <!-- 
 <van-nav-bar
@@ -47,7 +50,7 @@
 </view>
 
 <view wx:if="{{activeNum==2}}">
-<van-collapse value="{{ activeNames }}" bind:change="turn">
+<van-collapse value="{{ activeNick }}" bind:change="turnTo">
 <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
   <view slot="left">选择</view>
   <van-cell-group>

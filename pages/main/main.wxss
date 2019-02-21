@@ -7,6 +7,12 @@
   padding: 20px 15px 15px;
 }
 
+.back{
+  position: fixed;
+  bottom: 50px;
+  right: 2px;
+}
+
 .list{
   width: 87%;
   margin:10px;

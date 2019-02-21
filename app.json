@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/main/main",
-    "pages/feedback/feedback",
-    "pages/feedbackmanage/feedbackmanage",
     "pages/index/index",
+    "pages/main/main",
+    "pages/login/login",
+    "pages/feedbackmanage/feedbackmanage",
     "pages/add/add",
+    "pages/feedback/feedback",
     "pages/students/students",
     "pages/login/out",
     "pages/comments/comments",
