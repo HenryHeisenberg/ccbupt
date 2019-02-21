@@ -1,0 +1,5 @@
+<image src='/images/login.png'></image>
+<view class='but'>
+  <i-button bindtap="toStudents" type="primary" shape="circle" size="small">学生管理系统</i-button>
+    <i-button bindtap="toReply" type="primary" shape="circle" size="small">意见反馈回复</i-button>
+    </view>

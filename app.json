@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/main/main",
+    "pages/admin/admin",
     "pages/login/login",       
+    "pages/main/main",
+    "pages/feedbackmanage/feedbackmanage",
     "pages/index/index",
     "pages/students/students",
     "pages/search/search",
     "pages/feedback/feedback",
-    "pages/feedbackmanage/feedbackmanage",
     "pages/add/add",
     "pages/login/out",
     "pages/comments/comments",
@@ -24,6 +25,7 @@
   "usingComponents": {
     "wux-fab-button": "../../dist/wux/fab-button/index",
     "wux-upload": "../../dist/wux/upload/index",
+    "van-icon": "../../dist/vant/icon/index",
     "van-tabbar": "../../dist/vant/tabbar/index",
     "van-search": "../../dist/vant/search/index",
     "van-tabbar-item": "../../dist/vant/tabbar-item/index",
