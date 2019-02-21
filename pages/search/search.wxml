@@ -1,0 +1,20 @@
+<van-search
+  value="{{ str }}"
+  placeholder="请输入搜索关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+<van-notify id="van-notify" />
+<wux-fab-button position="bottomRight" theme="positive" buttons="{{buttons}}" direction="vertical" bind:click="onClick" />
+
+<block wx:for="{{data}}" wx:key="index">
+  <view class='wall'></view>
+  <view class='block' bindtap='more' data-index="{{index}}">
+    <!-- <view wx:if="{{item.sentTime}}">发货日期：{{item.sentTime}}</view> -->
+    <view>学生姓名：{{item.name}}</view>
+    <view>身份证号：{{item.idNum}}</view>
+    <view>考生号码：{{item.candidateNum}}</view>
+    <view>学生专业：{{item.major}}</view>
+  </view>
+</block>

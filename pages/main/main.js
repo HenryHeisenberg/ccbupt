@@ -91,7 +91,7 @@ goToNews:function(event){
       console.log(that.data.newsContent);
       if (res.data.status === "success") {
         wx.showToast({
-          title: "反馈成功",//这里打印出登录成功
+          title: "加载成功",//这里打印出登录成功
           icon: 'success',
           duration: 1000
         })
@@ -147,9 +147,9 @@ turn(event){
   },
 
   navBack:function(){
-    wx.navigateTo({
-      url: '/pages/main/main',
-    })
+    this.setData({
+      activeNum:0
+    });
   },
 
   onChange(event) {

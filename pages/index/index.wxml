@@ -7,7 +7,7 @@
 />
 <van-notify id="van-notify" />
 <wux-fab-button position="bottomRight" theme="positive" buttons="{{buttons}}" direction="vertical" bind:click="onClick" />
-<view wx:if="{{page==0}}">
+
 <block wx:for="{{data}}" wx:key="index">
   <view class='wall'></view>
   <view class='block' bindtap='more' data-index="{{index}}">
@@ -18,14 +18,3 @@
     <view>学生专业：{{item.major}}</view>
   </view>
 </block>
-</view>
-
-<view wx:if="{{page==1}}">
-  <view class='wall'></view>
-  <view class='block'>
-    <view>学生姓名：{{data.name}}</view>
-    <view>身份证号：{{data.idNum}}</view>
-    <view>考生号码：{{data.candidateNum}}</view>
-    <view>学生专业：{{data.major}}</view>
-  </view>
-</view>

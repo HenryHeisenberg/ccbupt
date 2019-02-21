@@ -7,7 +7,6 @@
 <van-panel title="{{newsContent.title}}" desc="作者：{{newsContent.publicer}}    时间：{{newsContent.publicTime}}" status="" use-footer-slot></van-panel>
 <text class='content'>{{newsContent.content}}</text>
 <view class='back'>
-<van-button size="small" bindtap='navBack'>返回主页</van-button>
 </view>
 
 <!-- 
@@ -119,7 +118,7 @@
 
 <view class='navi'>
 <van-tabbar active="{{ active }}" bind:change="onChange">
-  <van-tabbar-item icon="">主页</van-tabbar-item>
+  <van-tabbar-item icon="" bindtap='navBack'>主页</van-tabbar-item>
   <van-tabbar-item icon="">流程</van-tabbar-item>
   <van-tabbar-item icon="" info="">缴费方式</van-tabbar-item>
   <van-tabbar-item icon="" info="">意见反馈</van-tabbar-item>

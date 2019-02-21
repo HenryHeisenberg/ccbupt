@@ -27,17 +27,17 @@ Page({
   onShow: function () {
     my.anniversarySelectAll(this, app);
   },
-  onCancel:function(){
-    this.setData({
-      page: 0
-    });
-    my.anniversarySelectAll(this, app);
-  },
   onSearch: function (event){
     this.setData({
       page:1
     });
-    my.studentsSelectByOne(this, app, event.detail);
+    let str = JSON.stringify(event.detail)
+    setTimeout(function () {
+      wx.navigateTo({
+        url: "/pages/search/search?data=" + str,
+      }, 2100)
+    });
+    
 },
 
   onClick(e) {
