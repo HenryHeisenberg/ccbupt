@@ -1,7 +1,6 @@
 // pages/myFeelback/myFeelback.js
 import Notify from '../../dist/notify/notify';
 var app=getApp();
-var id="123";
 
 Page({
 
@@ -21,7 +20,7 @@ Page({
       url: app.data.host + "/comments/selectByUser",
       method: "GET",
       data: {
-        id : id
+        id: app.student.name
       },
       header: {
         "content-type": "application/x-www-form-urlencoded;charset=utf-8",

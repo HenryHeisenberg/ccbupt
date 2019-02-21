@@ -1,7 +1,6 @@
 // pages/main/main.js
 const my = require("../../utils/my.js");
-
-var app = getApp()
+var app = getApp();
 Page({
 
   /**
@@ -114,7 +113,7 @@ turn(event){
 
   submitFeedback: function (e) {
     var content = e.detail.value.content;
-    var asker = "123";
+    var asker = app.student.name;
     if (content.length === 0) {
       wx.showToast({
         title: '信息不能为空!',

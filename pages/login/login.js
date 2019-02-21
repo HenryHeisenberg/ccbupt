@@ -47,7 +47,8 @@ Page({
       header: { 'content-type': 'application/x-www-form-urlencoded' },
       success: function (res) {
         if (res.data.status=='success'){
-          let student = JSON.stringify(res.data.data)
+          let student = JSON.stringify(res.data.data);
+          app.student=res.data.data;
             setTimeout(function(){
               wx.navigateTo({
                 url: "/pages/students/students?data=" + student,
