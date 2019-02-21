@@ -1,5 +1,4 @@
-/* pages/admin/admin.wxss */
-
-.but{
-
+.imagesize{
+  display:flex;
+  justify-content: center;
 }
