@@ -220,9 +220,6 @@ const boardSelectAll = (that, app) => {
     let resData = res.data;
     if ('success' == resData.status) {
       wx.hideToast();
-      wx.showToast({
-        title: '成功',
-      })
       that.setData({
         data: resData.data
       })
