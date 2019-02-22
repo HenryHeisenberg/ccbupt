@@ -45,7 +45,7 @@ onCheck: function(e){
     })
     if (!stepOne) {
       wx.showToast({
-        title: '必须先勾选步骤1才可以勾选其他选项',
+        title: '请完成步骤一再进行步骤二和步骤三',
         icon : "none"
       })
       return;

@@ -131,16 +131,14 @@ Page({
 
   },
   goToWeb:function(){
+    var that=this;
     wx.setClipboardData({
       data: 'www.ccbupt.com',
       success(res) {
         wx.getClipboardData({
           success(res) {
             console.log(res.data) // data
-            wx.showToast({
-              title: '官网复制成功',
-              duration:2000
-            })
+            utils.showToast("学校官网已复制成功，请到浏览器粘贴访问");
           }
         })
       }
