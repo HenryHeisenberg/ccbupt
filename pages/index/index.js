@@ -13,12 +13,12 @@ Page({
       label: '增加学生',
       className: 'add',
       icon: '/images/add.png'
-    }
-      // {
-      //   label: '查找学生',
-      //   className: 'select',
-      //   icon: '/images/查找.png'
-      // }
+    },
+      {
+        label: '退出登陆',
+        className: '',
+        icon: '/images/返回.png'
+      }
     ],
   },
   onLoad: function (options) {
@@ -48,11 +48,11 @@ Page({
         url: '/pages/add/add',
       })
     }
-    // else if (index == 1) {
-    //   wx.navigateTo({
-    //     url: '/pages/selectStu/selectStu',
-    //   })
-    // }
+    else if (index == 1) {
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
   },
   more(e) {
     let that = this;

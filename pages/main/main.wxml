@@ -48,7 +48,7 @@
 </van-tabs>
 </view>
 
-<view wx:if="{{activeNum==2}}">
+<view wx:if="{{activeNum==3}}">
 <van-collapse value="{{ activeNick }}" bind:change="turnTo">
 <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
 
@@ -86,7 +86,7 @@
 </van-checkbox-group>
 </view>
 
-<view wx:if="{{activeNum==3}}">
+<view wx:if="{{activeNum==4}}">
 <view class="page">
   <view class="page__hd">
     <view class="page__title">意见反馈</view>
@@ -120,6 +120,7 @@
 <van-tabbar active="{{ active }}" bind:change="onChange">
   <van-tabbar-item icon="" bindtap='navBack'>主页</van-tabbar-item>
   <van-tabbar-item icon="">流程</van-tabbar-item>
+  <van-tabbar-item icon="">导航</van-tabbar-item>
   <van-tabbar-item icon="" info="">缴费方式</van-tabbar-item>
   <van-tabbar-item icon="" info="">意见反馈</van-tabbar-item>
 </van-tabbar>
