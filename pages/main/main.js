@@ -87,7 +87,7 @@ goToNews:function(event){
       console.log(that.data.newsContent);
       if (res.data.status === "success") {
         wx.showToast({
-          title: "加载成功",//这里打印出登录成功
+          title: "加载成功",
           icon: 'success',
           duration: 1000
         })
@@ -178,16 +178,16 @@ turn(event){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    try {
-      const result = wx.getStorageSync('result')
-      if (result) {
-        this.setData({
-          result : result
-        })
-      }
-    } catch (e) {
+    // try {
+    //   const result = wx.getStorageSync('result')
+    //   if (result) {
+    //     this.setData({
+    //       result : result
+    //     })
+    //   }
+    // } catch (e) {
      
-    }
+    // }
   },
 
   /**
